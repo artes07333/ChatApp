@@ -28,24 +28,24 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="chat" alignment="1" max="32767" attributes="0"/>
                   <Group type="102" alignment="1" attributes="0">
-                      <Component id="ipTextField" min="-2" pref="180" max="-2" attributes="0"/>
+                      <Component id="listenButton" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="portTextField" min="-2" pref="50" max="-2" attributes="0"/>
+                      <Component id="receivePort" pref="68" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="connectButton" min="-2" max="-2" attributes="0"/>
+                      <Component id="ipTextField" min="-2" pref="209" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="disconnectButton" min="-2" max="-2" attributes="0"/>
+                      <Component id="targetPort" min="-2" pref="50" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
-                      <Component id="jTextField1" max="32767" attributes="0"/>
+                      <Component id="message" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="sendButton" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -55,15 +55,15 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="ipTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="portTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="connectButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="disconnectButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="targetPort" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="receivePort" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="listenButton" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="chat" min="-2" pref="340" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="message" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="sendButton" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
@@ -74,27 +74,24 @@
   <SubComponents>
     <Component class="javax.swing.JTextField" name="ipTextField">
     </Component>
-    <Component class="javax.swing.JTextField" name="portTextField">
-    </Component>
-    <Component class="javax.swing.JButton" name="connectButton">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Connect"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="disconnectButton">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Disconnect"/>
-      </Properties>
+    <Component class="javax.swing.JTextField" name="targetPort">
     </Component>
     <Container class="javax.swing.JScrollPane" name="chat">
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
     </Container>
-    <Component class="javax.swing.JTextField" name="jTextField1">
+    <Component class="javax.swing.JTextField" name="message">
     </Component>
     <Component class="javax.swing.JButton" name="sendButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Send"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="receivePort">
+    </Component>
+    <Component class="javax.swing.JButton" name="listenButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Listen"/>
       </Properties>
     </Component>
   </SubComponents>
