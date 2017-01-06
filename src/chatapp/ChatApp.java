@@ -5,6 +5,8 @@
  */
 package chatapp;
 
+import chatapp.gui.MainScreen;
+
 /**
  *
  * @author inc07hp
@@ -16,6 +18,8 @@ public class ChatApp {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        MainScreen screen = new MainScreen();
+        screen.show();
     }
     
 }
