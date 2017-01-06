@@ -5,6 +5,8 @@
  */
 package chatapp.gui;
 
+import chatapp.networking.MessageListener;
+import chatapp.networking.MessageTransmitter;
 import chatapp.networking.WritableGUI;
 
 /**
@@ -41,8 +43,18 @@ public class MainScreen extends javax.swing.JFrame implements WritableGUI {
         setPreferredSize(new java.awt.Dimension(600, 500));
 
         sendButton.setText("Send");
+        sendButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sendButtonActionPerformed(evt);
+            }
+        });
 
         listenButton.setText("Listen");
+        listenButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                listenButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -86,6 +98,20 @@ public class MainScreen extends javax.swing.JFrame implements WritableGUI {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    MessageListener listener;
+    
+    private void listenButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listenButtonActionPerformed
+        // TODO add your handling code here:
+        listener = new MessageListener(this, Integer.parseInt(receivePort.getText()));
+        listener.start();
+    }//GEN-LAST:event_listenButtonActionPerformed
+
+    private void sendButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendButtonActionPerformed
+        // TODO add your handling code here:
+        MessageTransmitter transmitter = new MessageTransmitter(message.getText(), ipTextField.getText(), Integer.parseInt(targetPort.getText()));
+        transmitter.start();
+    }//GEN-LAST:event_sendButtonActionPerformed
 
     /**
      * @param args the command line arguments
